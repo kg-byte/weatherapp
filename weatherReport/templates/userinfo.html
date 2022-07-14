@@ -1,0 +1,6 @@
+<p>Your Info</p>
+<form method="POST" action="{% url 'userinfo' %}" enctype="multipart/form-data">
+{% csrf_token %}
+{{form}}
+<button>Submit</button>
+</form>

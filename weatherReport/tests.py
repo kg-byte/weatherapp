@@ -1,3 +1,7 @@
-from django.test import TestCase
+import pytest
+from .models import User 
 
-# Create your tests here.
+class TestModels:
+	def test_db_setup(cls, test_app):
+		cls.users = User.query.all()
+		assert len(cls.users) == 0
